@@ -80,6 +80,11 @@ const smsMatcherProviders: { [provider: string]: SMSMatcher[] } = {
       'KBank',
       'คืนเงิน {{amount:number}}บ บัตร {{to}}@{{from}} {{time:time}}น เหลือ {{balance:number}}บ',
       { type: 'refund' }
+    ),
+    match(
+      'Kbank',
+      '{{date:kbank_date}} {{time:time}} {{to}} เงินเข้า{{amount:number}} คงเหลือ{{balance:number}}บ',
+      { type: 'deposit' }
     )
   ]
 }
